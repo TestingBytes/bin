@@ -34,9 +34,7 @@ if( File.directory?(fileName) )
     exit -1
 end
 
-dropbox_url = "http://dl.dropbox.com/u/#{DROPBOX_NUMBER}/#{fileName}"
-
-system("cp #{fileName} #{DROPBOX_PATH}; echo #{dropbox_url} | pbcopy")
+system("cp #{fileName} #{DROPBOX_PATH}; echo http://dl.dropbox.com/u/#{DROPBOX_NUMBER}/#{fileName} | pbcopy")
 
 exit 0
 
